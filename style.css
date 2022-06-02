@@ -1,0 +1,587 @@
+@keyframes moveright {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(5rem);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes moveleft {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-5rem);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  color: #212529;
+  font-size: 2rem;
+  background-color: #e9ecef;
+}
+
+.herosection {
+  background-color: #e9ecef;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.herosection__textbox-text--name {
+  font-size: 5rem;
+  letter-spacing: 0.5rem;
+  animation: moveright 2s;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  font-weight: 400;
+  font-style: italic;
+}
+.herosection__textbox-text--description {
+  font-size: 3rem;
+  margin-top: 2rem;
+  animation: moveleft 2s;
+  backface-visibility: hidden;
+  font-weight: 400;
+  font-style: italic;
+}
+.herosection__imagebox {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(7, 5vw);
+  grid-gap: 0.3rem;
+  padding: 1.5rem;
+}
+.herosection__imagebox-image {
+  transition: all 0.8s;
+}
+.herosection__imagebox-image:hover {
+  transform: scale(1.1);
+  filter: brightness(120%);
+}
+.herosection__imagebox-image--1 {
+  grid-row: 1 / 4;
+  grid-column: 1 / 6;
+}
+.herosection__imagebox-image--2 {
+  grid-row: 1 / 5;
+  grid-column: 6 / 9;
+}
+.herosection__imagebox-image--3 {
+  grid-row: 4/ 6;
+  grid-column: 6 / 2;
+}
+.herosection__imagebox-image--4 {
+  grid-row: 4/ 6;
+  grid-column: 1 / 3;
+}
+.herosection__imagebox-image--5 {
+  grid-row: 6 / 8;
+  grid-column: 1 / 6;
+}
+.herosection__imagebox-image--6 {
+  grid-row: 5 / 8;
+  grid-column: 6 / 9;
+}
+.herosection__imagebox:hover .herosection__imagebox-image:not(:hover) {
+  transform: scale(0.98);
+  filter: blur(2px);
+}
+.herosection__img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.finish {
+  font-size: 3rem;
+  text-align: center;
+  background-color: #212529;
+  color: white;
+}
+
+.loginbox {
+  height: 100vh;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  border-top: 0.2rem solid rgba(165, 42, 42, 0.4);
+  background-color: rgba(165, 42, 42, 0.438);
+}
+.loginbox__form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.loginbox__form-item {
+  text-align: center;
+}
+.loginbox__form-item input {
+  border-radius: 1rem;
+  border: none;
+  background-color: rgba(246, 168, 168, 0.835);
+  width: 100%;
+  margin: 2rem;
+  display: block;
+  font-size: 2.5rem;
+  color: white;
+  height: 5rem;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+}
+.loginbox__form-item input:focus {
+  outline: 0.3rem solid rgba(165, 42, 42, 0.712);
+  transform: scale(1.1);
+}
+.loginbox__form-item input::placeholder {
+  color: white;
+  text-align: center;
+  font-size: 2.5rem;
+}
+.loginbox__form-item label {
+  display: none;
+}
+.loginbox__form-item > button {
+  width: 100%;
+  border-radius: 1rem;
+  border: none;
+  background-color: rgba(240, 94, 94, 0.746);
+  width: 100%;
+}
+.loginbox__form input {
+  padding: 1rem;
+  transition: all 0.3s;
+}
+.loginbox__form input:hover {
+  transform: scale(1.1);
+}
+.loginbox__form button {
+  padding: 1rem;
+  display: block;
+  text-align: center;
+  height: 5rem;
+  margin: 2rem;
+  font-size: 2.5rem;
+  color: white;
+  transition: all 0.3s;
+}
+.loginbox__form button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.loginbox__methods {
+  margin-top: 6rem;
+}
+.loginbox__methods .fas,
+.loginbox__methods .fab {
+  margin-right: 1rem;
+}
+.loginbox__methods button {
+  display: block;
+  text-align: center;
+  width: 120%;
+  margin: 1rem;
+  font-size: 2.2rem;
+  color: white;
+  background-color: rgba(6, 50, 245, 0.418);
+  margin-left: -1rem;
+  border-radius: 1rem;
+}
+
+.sexcard__card {
+  position: relative;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.534);
+  transition: all 0.3s;
+}
+.sexcard__card:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+
+.sexcard__img {
+  width: 100%;
+}
+
+.sexcard__description,
+.sexcard__overview,
+.sexcard__materials {
+  font-size: 2.5rem;
+  color: white;
+  text-align: center;
+  background-color: #9e5656;
+  margin: 0.3rem;
+  transition: all 0.3s;
+  padding: 1rem;
+}
+.sexcard__description:hover,
+.sexcard__overview:hover,
+.sexcard__materials:hover {
+  background-color: brown;
+  cursor: pointer;
+}
+.sexcard__description .fas,
+.sexcard__overview .fas,
+.sexcard__materials .fas {
+  display: inline-block;
+  margin: 0.5rem;
+  font-size: 3rem;
+}
+
+.sexcard__heart,
+.sexcard__cart {
+  position: absolute;
+  font-size: 3rem;
+  color: rgba(165, 42, 42, 0.8);
+  top: 0.5rem;
+  transition: all 0.3s;
+}
+.sexcard__heart:hover,
+.sexcard__cart:hover {
+  color: brown;
+  cursor: pointer;
+}
+
+.sexcard__heart {
+  left: 0.5rem;
+}
+
+.sexcard__cart {
+  right: 0.5rem;
+}
+
+.seemore {
+  text-align: center;
+  margin: 8rem 0 -3rem;
+}
+.seemore__text {
+  display: inline-block;
+  font-size: 3rem;
+  transition: all 0.3s;
+}
+.seemore__text:hover {
+  color: brown;
+  transform: scale(1.1);
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 0px brown;
+}
+
+.offlink:link,
+.offlink:active,
+.offlink:visited {
+  text-decoration: none;
+  color: \inherit;
+}
+
+.offerssection {
+  background-color: #e9ecef;
+  text-align: center;
+}
+.offerssection__heading {
+  font-size: 4.5rem;
+  text-align: center;
+  display: inline-block;
+  margin: 10rem 0 5rem;
+}
+.offerssection__heading:hover {
+  text-shadow: 0 2px 2px #495057;
+  transform: skewX(3deg);
+}
+.offerssection .card {
+  height: 35rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.offerssection .card:hover {
+  cursor: pointer;
+  outline: 7px solid rgba(165, 42, 42, 0.8);
+  outline-offset: 5px;
+  transform: scale(1.05);
+}
+.offerssection .card .sales__description {
+  color: white;
+  border-radius: 5px;
+  font-size: 3rem;
+  position: absolute;
+  left: 6.5rem;
+  bottom: 0;
+  padding: 1.3rem;
+  background-color: rgba(165, 42, 42, 0.8);
+}
+.offerssection .card-1 {
+  background-image: url(Images/anklepants.jpg);
+}
+.offerssection .card-2 {
+  background-image: url(Images/christmassales.jpg);
+}
+.offerssection .card-3 {
+  background-image: url(Images/extendedsizes.jpg);
+}
+.offerssection .card-4 {
+  background-image: url(Images/insidewears.jpg);
+}
+.offerssection .card-5 {
+  background-image: url(Images/ladiesgruncspants.jpg);
+}
+.offerssection .card-6 {
+  background-image: url(Images/malejeans.jpg);
+}
+.offerssection .card-7 {
+  background-image: url(Images/relacoshirts.jpg);
+}
+.offerssection .card-8 {
+  background-image: url(Images/summersales.jpg);
+}
+.offerssection .card-9 {
+  background-image: url(Images/trackandtrousers.jpg);
+}
+
+.footer {
+  background-color: #e9ecef;
+  padding: 10rem;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  list-style-type: none;
+}
+.footer .aboutsection,
+.footer .helpsection,
+.footer .accountsection,
+.footer .socialsection {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.footer .aboutsection .about,
+.footer .aboutsection .help,
+.footer .aboutsection .account,
+.footer .aboutsection .social,
+.footer .helpsection .about,
+.footer .helpsection .help,
+.footer .helpsection .account,
+.footer .helpsection .social,
+.footer .accountsection .about,
+.footer .accountsection .help,
+.footer .accountsection .account,
+.footer .accountsection .social,
+.footer .socialsection .about,
+.footer .socialsection .help,
+.footer .socialsection .account,
+.footer .socialsection .social {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.footer-logo {
+  width: 4rem;
+  height: 4rem;
+}
+.footer__item {
+  display: inline-block;
+  padding: 1rem;
+  transition: all 0.3s;
+  border-radius: 1rem;
+}
+.footer__item:link,
+.footer__item:visited {
+  text-decoration: none;
+  color: inherit;
+}
+.footer__item:hover {
+  background-color: #ced4da;
+  cursor: pointer;
+}
+
+.finish {
+  padding: 4rem;
+  font-size: 4rem;
+}
+
+.header {
+  background-color: #e9ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__left-logo {
+  fill: brown;
+  width: 20rem;
+  opacity: 0.75;
+}
+.header__left-sections {
+  display: flex;
+  gap: 2rem;
+}
+.header__left-sections-section {
+  font-size: 3rem;
+  font-weight: 400;
+  display: inline-block;
+  transition: all 0.3s;
+}
+.header__left-sections-section:hover {
+  color: brown;
+  cursor: pointer;
+  box-shadow: 0 5px 0 brown;
+}
+.header__middle {
+  display: flex;
+  align-items: center;
+  backface-visibility: hidden;
+}
+.header__middle-input {
+  justify-self: flex-start;
+  padding: 2rem;
+  border-radius: 30rem;
+  width: 30rem;
+  border: none;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+  height: 4rem;
+}
+.header__middle-input::placeholder {
+  font-size: 1.8rem;
+  text-align: center;
+  display: inline-block;
+  font-family: inherit;
+}
+.header__middle-input:focus {
+  outline: 2px solid #212529;
+  font-size: 2.5rem;
+  width: 40rem;
+  background-color: #e9ecef;
+}
+.header__middle-logo {
+  width: 2.8rem;
+  margin-left: -4rem;
+  z-index: 2;
+}
+.header__middle-logo:hover {
+  cursor: pointer;
+}
+.header__right {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+.header__right-logo {
+  width: 4rem;
+  height: 4rem;
+  fill: brown;
+  transition: all 0.3s;
+}
+.header__right-logo--logo {
+  position: relative;
+}
+.header__right-logo--logo::after {
+  text-align: center;
+  height: 60%;
+  width: 60%;
+  position: absolute;
+  display: block;
+  top: -1rem;
+  right: -1.5rem;
+  z-index: 5;
+  font-size: 2rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.863);
+  padding: 0.2rem;
+  border-radius: 1rem;
+  background-color: #b90808;
+}
+.header__right-logo:hover {
+  cursor: pointer;
+  box-shadow: 0 5px 0 rgba(165, 42, 42, 0.7);
+}
+.header__right-logo:last-child {
+  margin-right: 4rem;
+}
+.header__right-logo--2 {
+  position: relative;
+}
+.header__right-logo--2::after {
+  content: "7";
+}
+.header__right-logo--3 {
+  position: relative;
+}
+.header__right-logo--3::after {
+  content: "3";
+}
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+.row [class^="col-"] {
+  float: left;
+}
+.row [class^="col-"]:not(:last-child) {
+  margin-right: 6rem;
+}
+.row .col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+}
+.row .col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
+.row .col-2-of-3 {
+  width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem);
+}
+.row .col-1-of-4 {
+  width: calc((100% - 3 * 6rem) / 4);
+}
+.row .col-2-of-4 {
+  width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem);
+}
+.row .col-3-of-4 {
+  width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem);
+}
